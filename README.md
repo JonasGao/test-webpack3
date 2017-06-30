@@ -9,3 +9,9 @@ This is a test porject, for https://github.com/webpack/webpack-dev-server/issues
 3. npm run test ( or 'npm run dev' )
 4. modify any js files under 'src'
 5. you can see, the webpack does not perform compilation
+
+## env
+
+- node: 8.1.2
+- npm: 5.0.4
+- macOS: 10.12.5
