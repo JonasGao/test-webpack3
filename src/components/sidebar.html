@@ -1,0 +1,13 @@
+<nav class="sidebar">
+    <ul class="nav">
+        <li ng-repeat-start="g in sidebar.items" class="nav-heading">{{g.name}}</li>
+        <li ng-repeat="i in g.items" ng-class="{active: i.actived}">
+            <a ng-if="!i.sref" ng-click="sidebar.toggle(i)">{{i.name}}</a>
+            <a ng-if="i.sref" ui-sref="{{i.sref}}">{{i.name}}</a>
+            <ul ng-if="i.items" uib-collapse="i.actived" class="nav sidebar-subnav">
+                <li ng-repeat="c in i.items"><a ui-sref="{{c.sref}}" ng-click="sidebar.toggle(i)">{{c.name}}</a></li>
+            </ul>
+        </li>
+        <li ng-repeat-end></li>
+    </ul>
+</nav>
